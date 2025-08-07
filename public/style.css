@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+input {
+  width: 300px;
+  padding: 10px;
+}
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+ul {
+  margin-top: 20px;
+  list-style-type: none;
+}
