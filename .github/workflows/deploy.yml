@@ -1,0 +1,31 @@
+name: QuickNote CI/CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run basic check
+        run: echo "QuickNote build ready!"
+
+      - name: Build Docker image
+        run: docker build -t quicknote-app .
+
+      # Optional: Push to DockerHub or deploy to cluster
+      # You can add these steps later when integrating Kubernetes
+
